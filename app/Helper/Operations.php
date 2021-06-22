@@ -22,7 +22,7 @@ class Operations
         $basename = bin2hex(random_bytes(8)); // see http://php.net/manual/en/function.random-bytes.php
         $file_name = sprintf('%s.%0.8s', $basename, $extension);
 
-        $file_path =  $_SERVER['DOCUMENT_ROOT'].'/Fillip-Tracking/assets/'.$directory.DIRECTORY_SEPARATOR.$file_name;
+        $file_path =  $_SERVER['DOCUMENT_ROOT'].'/storage-folder/assets/'.$directory.DIRECTORY_SEPARATOR.$file_name;
 
         if(move_uploaded_file($_FILES[$key]['tmp_name'],$file_path)){
 
